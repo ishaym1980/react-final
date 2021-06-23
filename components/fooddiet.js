@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import Button from '@material-ui/core/Button';
 import TextField from '@material-ui/core/TextField';
+import { Container } from '@material-ui/core';
 
 
 export default class getfooddata extends Component{
@@ -51,6 +52,8 @@ axios.get('http://foodapivalues.somee.com/foodsearch/'+this.state.id)
 render(){ 
   
   return(
+<Container >
+  <div> <h1> Enter FOOD NAME TO GET DATA</h1></div>
 
 <form onSubmit={this.onSubmit}>
 <TextField className="form-group" label="Enter Food Name"  required variant="outlined"  value={this.state.id}
@@ -63,6 +66,7 @@ render(){
      
 </form>
 
+</Container>
  )
 }}
 

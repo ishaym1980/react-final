@@ -2,6 +2,7 @@ import Createuser from "./components/userdetailes";
 import Image from "./components/home";
 import Chart from './components/daytraker';
 import Tablediet from "./components/fooddiet";
+import PersistentDrawerLeft from "./components/homepage"
 
 
 import {
@@ -27,9 +28,10 @@ export default function App() {
   return (
     <Router>
       <div>
+         <PersistentDrawerLeft/>
         <ul>
           <li>
-            <Link to="/Home">Home</Link>
+            <Link to="/">Home</Link>
           </li>
           <li>
             <Link to="/AddUser">AddUser</Link>
@@ -45,18 +47,12 @@ export default function App() {
           </li>
          
         </ul>
-
+       
         <hr />
 
-        {/*
-          A <Switch> looks through all its children <Route>
-          elements and renders the first one whose path
-          matches the current URL. Use a <Switch> any time
-          you have multiple routes, but you want only one
-          of them to render at a time
-        */}
+
         <Switch>
-          <Route exact path="/Home">
+          <Route exact path="/">
             <Image />
           </Route>
           <Route path="/Adduser">

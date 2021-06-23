@@ -42,7 +42,7 @@ export default class DailyMenu extends Component {
 
     console.log(mymenu);
 
-    axios.post('http://localhost:5000/users/insert', mymenu)
+    axios.post('https://dry-beyond-40482.herokuapp.com/users/insert', mymenu)
       .then(res => console.log(res.data));
 
    
@@ -51,6 +51,8 @@ export default class DailyMenu extends Component {
   render() {
     return (
     
+
+      <containr>
         <form onSubmit={this.onSubmit}> 
          
          <div className="form-group">
@@ -65,7 +67,7 @@ export default class DailyMenu extends Component {
         SUBMIT
       </Button>
       </form>
-    
+      </containr>
       
     )
   }
